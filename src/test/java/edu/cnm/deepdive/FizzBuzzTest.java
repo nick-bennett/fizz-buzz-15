@@ -6,13 +6,41 @@ import org.junit.jupiter.api.Test;
 
 class FizzBuzzTest {
 
+  static final int[] fizzValues = {3, 9, 18, 42};
+  static final int[] buzzValues = {5, 25, 40, 95};
+  static final int[] fizzBuzzValues = {15, 90, 105};
+  static final int[] neitherValues = {4, 29, 31, 101};
+
   @Test
-  void check() {
+  void check_fizz() {
     FizzBuzz fb = new FizzBuzz();
-    assertEquals(FizzBuzz.FIZZ, fb.check(9));
-    assertEquals(FizzBuzz.BUZZ, fb.check(20));
-    assertEquals(FizzBuzz.FIZZ_BUZZ, fb.check(15));
-    assertEquals(String.valueOf(1), fb.check(1));
+    for (int value : fizzValues) {
+      assertEquals(FizzBuzz.FIZZ, fb.check(value));
+    }
+  }
+
+  @Test
+  void check_buzz() {
+    FizzBuzz fb = new FizzBuzz();
+    for (int value : buzzValues) {
+      assertEquals(FizzBuzz.BUZZ, fb.check(value));
+    }
+  }
+
+  @Test
+  void check_fizzBuzz() {
+    FizzBuzz fb = new FizzBuzz();
+    for (int value : fizzBuzzValues) {
+      assertEquals(FizzBuzz.FIZZ_BUZZ, fb.check(value));
+    }
+  }
+
+  @Test
+  void check_neither() {
+    FizzBuzz fb = new FizzBuzz();
+    for (int value : neitherValues) {
+      assertEquals(String.valueOf(value), fb.check(value));
+    }
   }
 
 }
