@@ -16,19 +16,12 @@ public class FizzBuzz {
   }
 
   public String check(int value) {
-    String result;
-    boolean divisibleBy3 = value % 3 == 0;
-    boolean divisibleBy5 = value % 5 == 0;
-    if (divisibleBy3 && divisibleBy5) {
-      result = FIZZ_BUZZ;
-    } else if (divisibleBy3) {
-      result = FIZZ;
-    } else if (divisibleBy5) {
-      result = BUZZ;
-    } else {
-      result = String.valueOf(value);
-    }
-    return result;
+    return switch (value % 15) {
+      case 0 -> FIZZ_BUZZ;
+      case 3, 6, 9, 12 -> FIZZ;
+      case 5, 10 -> BUZZ;
+      default -> String.valueOf(value);
+    };
   }
 
 }
