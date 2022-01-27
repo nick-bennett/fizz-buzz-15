@@ -15,7 +15,7 @@ class FizzBuzzTest {
   void check_fizz() {
     FizzBuzz fb = new FizzBuzz();
     for (int value : fizzValues) {
-      assertEquals(FizzBuzz.FIZZ, fb.check(value));
+      assertEquals(FizzBuzz.FIZZ, fb.checkLadder(value));
     }
   }
 
@@ -23,7 +23,7 @@ class FizzBuzzTest {
   void check_buzz() {
     FizzBuzz fb = new FizzBuzz();
     for (int value : buzzValues) {
-      assertEquals(FizzBuzz.BUZZ, fb.check(value));
+      assertEquals(FizzBuzz.BUZZ, fb.checkLadder(value));
     }
   }
 
@@ -31,7 +31,7 @@ class FizzBuzzTest {
   void check_fizzBuzz() {
     FizzBuzz fb = new FizzBuzz();
     for (int value : fizzBuzzValues) {
-      assertEquals(FizzBuzz.FIZZ_BUZZ, fb.check(value));
+      assertEquals(FizzBuzz.FIZZ_BUZZ, fb.checkLadder(value));
     }
   }
 
@@ -39,7 +39,7 @@ class FizzBuzzTest {
   void check_neither() {
     FizzBuzz fb = new FizzBuzz();
     for (int value : neitherValues) {
-      assertEquals(String.valueOf(value), fb.check(value));
+      assertEquals(String.valueOf(value), fb.checkLadder(value));
     }
   }
 
