@@ -1,6 +1,5 @@
 package edu.cnm.deepdive;
 
-import java.util.function.Function;
 import java.util.function.IntFunction;
 
 public class FizzBuzz {
