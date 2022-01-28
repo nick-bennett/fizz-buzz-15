@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'application'
 }
 
 java {
@@ -10,6 +10,10 @@ java {
 
 group 'edu.cnm.deepdive'
 version '1.0-SNAPSHOT'
+
+application {
+    mainClass = project.findProperty("mainClass").toString()
+}
 
 repositories {
     mavenCentral()
@@ -24,3 +28,4 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
